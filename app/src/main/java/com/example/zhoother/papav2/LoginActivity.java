@@ -3,22 +3,20 @@ package com.example.zhoother.papav2;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
-
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -91,11 +89,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 String usuario = ((EditText)findViewById(R.id.email)).getText().toString();
                 String contraseña = ((EditText)findViewById(R.id.password)).getText().toString();
                     if (usuario.equals("admin")&& contraseña.equals("admin")){
-                        Intent nuevo = new Intent(LoginActivity.this,registro.class);
+                        Intent nuevo = new Intent(LoginActivity.this, MenuActivity.class);
                         startActivity(nuevo);
 
                     }else {
-                        Toast.makeText(getApplicationContext(),"Usiario incorrecto",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Usuario incorrecto", Toast.LENGTH_LONG).show();
                     }
                 //attemptLogin();
             }
