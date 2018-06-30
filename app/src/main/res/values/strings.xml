@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PAPAv2</string>
+    <string name="app_name">Punto de Venta Movil</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>

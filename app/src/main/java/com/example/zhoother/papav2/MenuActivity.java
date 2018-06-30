@@ -43,7 +43,10 @@ public class MenuActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
+
+
     }
+
 
     @Override
     public void onBackPressed() {
@@ -85,8 +88,9 @@ public class MenuActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-            Intent ventas = new Intent(MenuActivity.this, registro.class);
-            startActivity(ventas);
+            Intent intent;
+            intent = new Intent(MenuActivity.this, Ventas.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_gallery) {
 
